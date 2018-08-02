@@ -13,6 +13,7 @@ pepper_dcm:
       - LElbowYaw
       - LElbowRoll
       - LWristYaw
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   RightArm_controller:
     type: position_controllers/JointTrajectoryController
     joints:
@@ -21,25 +22,30 @@ pepper_dcm:
       - RElbowYaw
       - RElbowRoll
       - RWristYaw
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   Head_controller:
     type: position_controllers/JointTrajectoryController
     joints:
       - HeadYaw
       - HeadPitch
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   Pelvis_controller:
     type: position_controllers/JointTrajectoryController
     joints:
       - HipRoll
       - HipPitch
       - KneePitch
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   LeftHand_controller:
     type: position_controllers/JointTrajectoryController
     joints:
       - LHand
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   RightHand_controller:
     type: position_controllers/JointTrajectoryController
     joints:
       - RHand
+    pid: {p: 100.0, i: 0.01, d: 10.0}
 
   # Effort Controllers ---------------------------------------
   WheelFL_controller:
